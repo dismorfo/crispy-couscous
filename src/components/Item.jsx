@@ -12,10 +12,11 @@ function typesMap(type) {
 export default function Item(props) {
   
   const { title, identifier, type } = props.document;
-
-  console.log(props);
   
   const resource_type = typesMap(type);
+
+  // See: https://mui.com/components/skeleton/
+  // const { loading = false } = props;
 
   return (
     <article className="item">

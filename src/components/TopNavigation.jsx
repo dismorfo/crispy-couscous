@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import ToggleNavigation from '../images/toggle-navigation.svg';
 
-export default function TopNavigation(props) {
+export default function TopNavigation() {
   return (
     <nav className="navbar navbar-default" role="navigation">
     <div className="container-fluid">
@@ -20,7 +20,7 @@ export default function TopNavigation(props) {
         <div className="search_holder widget navbar-form navbar-right" data-name="search_form">
           <form method="get" action="/search" role="search">
             <input name="q" type="text" placeholder="Search titles, subjects, authors..." title="Enter the terms you wish to search for." aria-label="Search" />
-              <input type="submit" className="submit-search" aria-label="Submit Search" />
+            <input type="submit" className="submit-search" aria-label="Submit Search" />
           </form>
         </div>
       </div>
