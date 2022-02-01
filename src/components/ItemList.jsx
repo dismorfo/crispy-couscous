@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import createPersistedState from 'use-persisted-state';
+// import createPersistedState from 'use-persisted-state';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import BrowseItem from './BrowseItem';
 
-const useResState = createPersistedState('res');
+// const useResState = createPersistedState('res');
 // const useRes = initialRes => {
 //   const [res, setRes] = useResState(initialRes);
 //   return {
@@ -18,7 +18,8 @@ export default function ItemList(props) {
 
   const [ data, setData ] = useState({ numFound: 0, start: 0, docs: []});
   
-  const [res, setRes] = useResState({});
+  // eslint-disable-next-line
+  // const [res, setRes] = useResState({});
 
   const { collection, rows, page } = props;
 

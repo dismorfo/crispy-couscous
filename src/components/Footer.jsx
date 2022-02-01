@@ -40,7 +40,7 @@ export default function Footer(props) {
               <Link to="/browse" className="Browselink">Browse</Link>
             </li>
             <li className="accessibility-link">
-              <a className="external" href="https://www.nyu.edu/footer/accessibility.html" target="_blank" rel="noopener">Accessibility 
+              <a className="external" href="https://www.nyu.edu/footer/accessibility.html" target="_blank" rel="noreferrer">Accessibility 
                 <span aria-hidden="true" role="presentation">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="15" width="15">
                     <path fill="none" stroke="#ffffff" strokeWidth="1" d="m8.6,7H1v12h12V11.4M9,1v2l2,2-6,6 4,4 6-6 2,2h2V1z"></path>
@@ -49,7 +49,7 @@ export default function Footer(props) {
               </a>
               </li>
               <li className="feedback-link">
-                  <a href="https://nyu.qualtrics.com/jfe/form/SV_8zQOuCi9g0JUVsV?site=indianocean&amp;l=f" target="_blank" rel="noopener">Send Feedback 
+                  <a href="https://nyu.qualtrics.com/jfe/form/SV_8zQOuCi9g0JUVsV?site=indianocean&amp;l=f" target="_blank" rel="noreferrer">Send Feedback 
                   <span aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="15" width="15">
                       <path fill="none" stroke="#ffffff" strokeWidth="1" d="m8.6,7H1v12h12V11.4M9,1v2l2,2-6,6 4,4 6-6 2,2h2V1z"></path>
