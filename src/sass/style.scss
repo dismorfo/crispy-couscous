@@ -1,0 +1,362 @@
+//Bootstrap
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "partials/bootstrap-variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+
+//@import "bootstrap/print";
+// Core CSS
+@import "partials/scaffolding";
+
+// Components
+@import "bootstrap/component-animations";
+
+@import "partials/aconavbar";
+
+@import "partials/header";
+@import "partials/search";
+
+
+//  End Bootstrap 
+
+// Start Indian Ocean Styles 
+
+html {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-sans-serif;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 5%;
+  padding-right: 5%;
+  @media (min-width: $grid-float-breakpoint) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.front {
+  .intro {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 1rem auto 0rem auto;
+    margin: 1rem 0 0rem 0;
+    max-width: 46em;
+  }
+}
+
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+  margin-top: 0px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  .itemdouble {
+    -webkit-flex: 1 1 330px;
+    flex: 1 1 330px;
+    padding-right: 20px;
+    margin: 0 0px 20px 0px;
+    @media (min-width: 1090px) {
+      -webkit-flex: 2 1 680px;
+      flex: 2 1 680px;
+    }
+    @media (max-width: 780px) {
+      padding-right: 0px;
+    }
+  }
+  .item:empty {
+    height: 0;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+.item {
+  -ms-flex: 0 1 32%;
+  -webkit-flex: 0 1 32%;
+  flex: 0 1 32%;
+  margin: 1% 0;
+  @media (max-width: 961px) {
+    -webkit-flex: 0 1 49%;
+    flex: 0 1 49%;
+    margin: 1% 0;
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    -webkit-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin: 1% 0;
+  }
+  font-family: $font-family-serif;
+
+  background-color: $navbar-default-bg;
+  @include box-shadow(rgba(#666, 0.3) 1px 1px 1px);
+  transition: .3s;
+  overflow: hidden;
+
+  .md_label {
+
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-size: .8em;
+  }
+  .md_title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-family: $font-family-serif, serif;
+    margin: 0;
+    padding: 0 0 5px 0;
+    a,
+    a:link,
+    a:visited {
+      font-weight: normal;
+      color: black;
+      display: block;
+    }
+  }
+  .md_authors {
+    font-size: 1rem;
+    line-height: 1.25;
+    overflow: hidden;
+    width: auto;
+  }
+  .md_author {
+    &:not(:last-child)::after {
+      content: ";\00a0";
+    }
+  }
+  .md_subject:link,
+  .md_subject:visited {
+    //display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: $font-family-sans-serif;
+    font-size: .9rem;
+    color: #005c94;
+    &:hover {
+      color: lighten($brand-primary, 7%);
+    }
+  }
+  .md_subject:not(:last-child)::after {
+    content: ",\00a0";
+  }
+
+  .md_provider {}
+  
+  .thumbs {
+    width: 26%; // max-width: 90px;
+    margin-right: 4%;
+    margin-left: -8px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    float: left;
+    // elaborate ruse for cropping the thumbnails 
+    .clipper {
+      position: relative;
+      top: -10px;
+      overflow: hidden;
+      @include box-shadow(rgba(#666, 0.5) 1px 1px 5px);
+    }
+    a {
+      display: block;
+      position: relative;
+      top: 10px;
+      overflow: hidden;
+    }
+    img {
+      width: 120%;
+      height: auto;
+      margin-left: -10%;
+      margin-top: -10%;
+    }
+  }
+}
+
+.card {
+ // wrapper and inner padding to respect an IE 10 flexbox / box-sizing bug 
+  padding: 8px 12px 8px 8px;
+}
+
+.item-list {
+  margin-top: 30px;
+}
+
+main {
+  min-height: 400px;
+  padding: 2em 0 4em;
+  @media (max-width: $grid-float-breakpoint) {
+    padding: 0 0 4em;
+  }
+  .maintext {
+    max-width: 50em;
+  }
+  a:link,
+  a:focus {
+    font-weight: bold;
+  }
+  ul {
+    margin: 1rem 0;
+    padding: 0;
+    list-style-position: inside;
+  }
+  li {
+    padding-left: .1rem;
+    padding-right: .1rem;
+  }
+  p {
+    margin: 1rem 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h2.page-title {
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 0px 0px 1px white;
+    margin-top: 0;
+    @media (max-width: $grid-float-breakpoint) {
+      font-size: 1.4rem;
+    }
+  }
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 2.5rem 0 .5rem;
+    text-shadow: 0px 0px 1px white;
+  }
+  header {
+    @include clearfix;
+  }
+  .readmore {
+    font-size: .9rem;
+    padding-left: 10px;
+    line-height: 1.2;
+    font-family: $font-family-sans-serif;
+    display: inline-block;
+  }
+}
+
+body.book {
+  overflow-y: hidden;
+  .navbar {
+    margin-bottom: 0;
+  }
+  .container-fluid {
+    max-width: none;
+  }
+  #book {
+    border: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 1em auto;
+  width: auto;
+  .yui3-paginator-first,
+  .yui3-paginator-next,
+  .yui3-paginator-page {
+    display: inline-block;
+    padding: 5px;
+    padding: 6px 12px;
+    line-height: 1.42857;
+    text-decoration: none;
+    color: darken($brand-primary, 4%);
+    &:hover {
+      color: lighten($brand-primary, 4%); // box-shadow: inset 0 0 20px $brand-secondary-bright;
+    }
+  }
+  .yui3-paginator-current-page {
+    color: #fff;
+    background-color: darken($brand-primary, 4%); // border-color: darken($brand-secondary-bright, 5%);
+    // box-shadow: inset 0 0 20px gold;
+    cursor: default;
+    &:hover {
+      background-color: lighten($brand-primary, 2%);
+      color: white;
+    }
+  }
+}
+
+
+// Elements that are not meant to be seen until finished loading
+
+.io-loading {
+  .resultsnum,
+  #browse-select,
+  #YUItabs,
+  .filters,
+  .pagination,
+  .footer-wrapper {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+  }
+}
+
+.items-no-results {
+  .resultsnum,
+  #browse-select,
+  .filters {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+  }
+}
+
+.widget {
+  &.book {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@import "partials/bubbling";
+
+.hiddenSiblings {
+  display: none;
+  visibility: hidden;
+}
+
+select:active,
+select:hover,
+select:focus {
+  outline-color: $glowycolor !important;
+}
+
+:focus {
+  outline: $input-border-focus auto 3px;
+  outline-color: $input-border-focus;
+  outline-style: auto;
+  outline-width: 3px;
+}
+
+@import "partials/footer";

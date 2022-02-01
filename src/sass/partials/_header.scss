@@ -1,0 +1,44 @@
+.header-wrapper {
+  background-color: $brand-primary;
+  color: #fff;
+  @include box-shadow(0px 0px 10px 5px rgba(110, 102, 93, 0.3));
+  @include box-shadow(0px 0px 10px 5px #deccbf);
+  width: 100%;
+  overflow: auto;
+}
+
+.header-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  @media (max-width: 479px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .sitename {
+    width: 80%;
+    max-width: 670px;
+    float: left;
+    margin: 0;
+    line-height: 1;
+    a {
+      height: 50px;
+      text-indent: -1000em;
+      line-height: 1;
+      display: block;
+      background: url("../../images/iodcvert.png") no-repeat left center;
+      background-size: auto 100%;
+      @media (min-width: $grid-float-breakpoint) {
+        height: 40px;
+        background: url("../../images/iodc.png") no-repeat left center;
+        background-size: 100% auto;
+      }
+      @media (max-width: 479px) {
+        background: url("../../images/iodcvert.png") no-repeat left center;
+        background-size: auto 100%;
+        padding-top: 0;
+        height: 40px;
+      }
+    }
+  }
+}
