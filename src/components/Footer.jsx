@@ -63,7 +63,7 @@ export default function Footer(props) {
       <footer className="footer-main container-fluid" role="contentinfo">
   	    <div className="logo">
           <a href="http://nyu.edu/" target="_blank" rel="noreferrer">
-            <img src="http://dlib.nyu.edu/indianocean/images/nyu_short_white.svg" alt="NYU" />
+            <img src="https://dlib.nyu.edu/indianocean/images/nyu_short_white.svg" alt="NYU" />
           </a>
         </div>
         <div className="partner-wrapper">
