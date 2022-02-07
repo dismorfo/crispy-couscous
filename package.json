@@ -2,7 +2,7 @@
   "name": "io",
   "description": "Indian Ocean Digital Collection",
   "homepage": "http://dlib.nyu.edu/",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
