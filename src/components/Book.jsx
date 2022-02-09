@@ -3,7 +3,9 @@ import Iframe from 'react-iframe'
 export default function Book(props) { 
   const { identifier = '' } = props;
 
-  const url = `https://objective-johnson-b22e71.netlify.app/books/${identifier}/1`
+  const endpoint = process.env.REACT_APP_ENDPOINT;
+  const url = `${endpoint}/${identifier}/1`;
+
   return (
     <Iframe src={url}
             width="100%"
