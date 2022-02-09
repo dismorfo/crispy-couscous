@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-
 import Home from './pages/home';
 const About = lazy(() => import('./pages/about'));
 const SearchCollection = lazy(() => import('./pages/search'));
@@ -38,7 +37,7 @@ export default function App(props) {
                <SearchCollection />
              </Suspense>
            }
-         />         
+         />
          <Route
            path="books/:identifier"
            element={
@@ -46,8 +45,8 @@ export default function App(props) {
                <EmbeddedBook />
              </Suspense>
            }
-         />         
-         <Route 
+         />
+         <Route
            path="*" element={
              <Suspense fallback={<>...</>}>
                <NotFound />
