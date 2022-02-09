@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import Book from '../../components/Book';
 
 export default function EmbeddedBook() {
   let { identifier } = useParams();
