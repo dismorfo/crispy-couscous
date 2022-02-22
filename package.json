@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
     "marked": "^4.0.12",
+    "mirador": "^3.3.0",
+    "mirador-image-tools": "^0.11.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-axios": "^2.0.5",
