@@ -25,6 +25,7 @@
     "react-scripts": "5.0.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.49.0",
+    "url": "^0.11.0",
     "use-persisted-state": "^0.3.3",
     "web-vitals": "^2.1.4"
   },
