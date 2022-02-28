@@ -5,15 +5,24 @@ import Mirador from 'mirador/dist/es/src/index';
 
 export default function MiradorViewer(props) { 
     
+  const { identifier = '' } = props;
     
-    useEffect(() => {
-        Mirador.viewer(props.config);
+  const endpoint = process.env.REACT_APP_API_VIEWER;
+  const manifestId = `${endpoint}/books/${identifier}/manifest.json`;
+
+  const config = { 
+      id: "demo", 
+      windows: [{manifestId: manifestId }]};
+
+  useEffect(() => {
+      Mirador.viewer(config);
     })
 
-    
-    return ( 
-        <div id={props.config.id}></div>
-    )
+  return (
+    <>
+      <div id={config.id}></div>
+    </>
+  ); 
     
 }
 
