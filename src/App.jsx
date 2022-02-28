@@ -7,6 +7,7 @@ const SearchCollection = lazy(() => import('./pages/search'));
 const Browse = lazy(() => import('./pages/browse'));
 const NotFound = lazy(() => import('./pages/notfound'));
 const EmbeddedBook = lazy(() => import('./pages/embedded-book'));
+const ViewerMirador = lazy(() => import('./pages/viewer-mirador'));
 
 export default function App(props) {
   return (
@@ -46,6 +47,14 @@ export default function App(props) {
              </Suspense>
            }
          />
+         <Route
+          path="viewer/mirador/:identifier"
+          element={
+            <Suspense fallback={<>...</>}>
+              <ViewerMirador />
+            </Suspense>
+          }
+        />
          <Route
            path="*" element={
              <Suspense fallback={<>...</>}>

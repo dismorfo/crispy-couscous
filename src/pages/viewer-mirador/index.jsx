@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
-import MiradorBook from '../../components/MiradorBook';
+import MiradorViewer from '../../components/MiradorViewer'
 
-export default function EmbeddedMiradorBook() {
+export default function ViewerMirador() {
   let { identifier } = useParams();
     
   const endpoint = process.env.REACT_APP_API_VIEWER;
@@ -10,8 +10,9 @@ export default function EmbeddedMiradorBook() {
 
   return (
     <>
-      <MiradorBook config={{ id: "demo", windows: [{manifestId: manifestId }]}}/>
+      <MiradorViewer config={{ id: "demo", windows: [{manifestId: manifestId }]}}/>
     </>
+    
   );
 }
 
