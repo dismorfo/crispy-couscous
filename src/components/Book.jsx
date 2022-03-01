@@ -1,15 +1,17 @@
-//import Iframe from 'react-iframe'
-import MiradorViewer from "./MiradorViewer";
+import Iframe from 'react-iframe'
 
 export default function Book(props) { 
-  /*
-  const { identifier = '' } = props;
+  //const { identifier = '' } = props;
 
   const endpoint = process.env.REACT_APP_BOOK_URL;
-  const url = `${endpoint}/${identifier}/1`;
-  */  
- 
+  const url = `${endpoint}/${props.identifier}/1`;
+
   return (
-    <MiradorViewer />
+    <Iframe src={url}
+            width="100%"
+            height="750px"
+            id="aBook"
+            display="block"
+            />
   )
 }

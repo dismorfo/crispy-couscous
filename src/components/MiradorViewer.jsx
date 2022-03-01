@@ -5,14 +5,18 @@ import Mirador from 'mirador/dist/es/src/index';
 
 export default function MiradorViewer(props) { 
     
-  const { identifier = '' } = props;
+  //const { identifier = '' } = props;
     
   const endpoint = process.env.REACT_APP_API_VIEWER;
-  const manifestId = `${endpoint}/books/${identifier}/manifest.json`;
+  const manifestId = `${endpoint}/books/${props.identifier}/manifest.json`;
 
   const config = { 
       id: "demo", 
-      windows: [{manifestId: manifestId }]};
+      windows: [{manifestId: manifestId }],
+      window: { 
+        allowMaximize: false,
+      }
+  }
 
   useEffect(() => {
       Mirador.viewer(config);
