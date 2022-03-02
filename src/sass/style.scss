@@ -302,6 +302,14 @@ body.book {
   }
 }
 
+.mirador-viewer { 
+  position: relative;
+}
+
+#demo { 
+  position: relative;
+}
+
 
 // Elements that are not meant to be seen until finished loading
 
@@ -360,3 +368,5 @@ select:focus {
 }
 
 @import "partials/footer";
+
+

@@ -15,6 +15,7 @@ export default function MiradorViewer(props) {
       windows: [{manifestId: manifestId }],
       window: { 
         allowMaximize: false,
+        allowClose: true
       }
   }
 
@@ -23,10 +24,10 @@ export default function MiradorViewer(props) {
     })
 
   return (
-    <>
-      <div id={config.id}></div>
-    </>
+    <div className="mirador-viewer">
+      <div id={config.id}>
+      </div>
+    </div>
   ); 
-    
 }
 
