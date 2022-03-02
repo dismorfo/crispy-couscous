@@ -10,7 +10,7 @@ export default function Layout(props) {
      <MainHeader label={props.label} />
      <TopNavigation />
      <Outlet />
-     { /books/.test(location.pathname) === false ? <Footer/> : '' }
+     { /mirador/.test(location.pathname) === false  ? <Footer/> : '' }
     </>
   );
 }
