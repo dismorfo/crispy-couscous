@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Mirador from 'mirador/dist/es/src/index';
-//import { miradorImageToolsPlugin } from 'mirador-image-tools';
+import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js';
 
 
 export default function MiradorViewer(props) {
@@ -11,21 +11,44 @@ export default function MiradorViewer(props) {
 
   const manifestId = `${endpoint}/${resourceType}/${identifier}/manifest.json`;
 
+  const miradorPlugins = [...miradorImageToolsPlugin];
+
+  const canvasIndexValue = 0;
   // uuid
   // https://www.npmjs.com/package/uuid
   const uuid = 'demo';
 
   const config = {
-      id: uuid, //uuid
-      windows: [{manifestId: manifestId }],
+      id: uuid, //uuid,
+      workspaceControlPanel: {
+        enabled: false,
+      },
+      workspace: { 
+        isWorkspaceAddVisible: false,
+        allowNewWindows: false,
+      },
+      language: 'en',
+      windows: [
+        {
+          manifestId: manifestId,
+          imageToolsEnabled: true,
+          imageToolsOpen: false,
+          canvasIndex: canvasIndexValue,
+          view: 'single',
+        }
+      ],
       window: {
-        allowMaximize: false,
-        allowClose: true
-      }
+        allowClose: false,
+        defaultSideBarPanel: 'info',
+        sideBarOpenByDefault: true, 
+        showLocalePicker: true,
+        hideWindowTitle: true,
+      },
+      miradorPlugins,
   }
 
   useEffect(() => {
-      Mirador.viewer(config);
+      Mirador.viewer(config, [...miradorImageToolsPlugin]);
     })
 
   return (
