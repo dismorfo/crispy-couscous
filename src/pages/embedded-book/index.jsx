@@ -1,11 +1,14 @@
 import { useParams } from 'react-router-dom';
 
-import MiradorViewer from '../../components/MiradorViewer';
+import Book from "../../components/Book"
 
-export default function EmbeddedBook() {
+export default function ViewerMirador() {
   let { identifier } = useParams();
 
   return (
-      <MiradorViewer identifier={identifier} />
+    <>
+      <Book identifier={identifier} />
+    </>
   )
 }
+
