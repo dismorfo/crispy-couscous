@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Mirador from '../../node_modules/mirador/dist/mirador.min.js';
-import miradorImageToolsPlugin from '../../node_modules/mirador-image-tools/umd/mirador-image-tools.min.js';
 
 
 export default function MiradorViewer(props) {
@@ -10,8 +9,6 @@ export default function MiradorViewer(props) {
   const endpoint = process.env.REACT_APP_API_VIEWER;
 
   const manifestId = `${endpoint}/${resourceType}/${identifier}/manifest.json`;
-
-  const miradorPlugins = [...miradorImageToolsPlugin];
 
   const canvasIndexValue = 0;
   // uuid
@@ -47,7 +44,7 @@ export default function MiradorViewer(props) {
   }
 
   useEffect(() => {
-      Mirador.viewer(config, miradorPlugins);
+      Mirador.viewer(config);
     })
 
   return (
