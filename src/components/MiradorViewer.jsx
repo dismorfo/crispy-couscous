@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Mirador from 'mirador/dist/es/src/index';
-import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js';
+import Mirador from '../../node_modules/mirador/dist/mirador.min.js';
+import miradorImageToolsPlugin from '../../node_modules/mirador-image-tools/umd/mirador-image-tools.min.js';
 
 
 export default function MiradorViewer(props) {
@@ -43,12 +43,11 @@ export default function MiradorViewer(props) {
         sideBarOpenByDefault: true, 
         showLocalePicker: true,
         hideWindowTitle: true,
-      },
-      miradorPlugins,
+      }
   }
 
   useEffect(() => {
-      Mirador.viewer(config, [...miradorImageToolsPlugin]);
+      Mirador.viewer(config, miradorPlugins);
     })
 
   return (
