@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Mirador from '../../node_modules/mirador/dist/mirador.min.js';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function MiradorViewer(props) {
@@ -11,12 +12,12 @@ export default function MiradorViewer(props) {
   const manifestId = `${endpoint}/${resourceType}/${identifier}/manifest.json`;
 
   const canvasIndexValue = 0;
-  // uuid
-  // https://www.npmjs.com/package/uuid
-  const uuid = 'demo';
+  
+  const uuid = "viewer-" + uuidv4();
+  
 
   const config = {
-      id: uuid, //uuid,
+      id: uuid, 
       workspaceControlPanel: {
         enabled: false,
       },
