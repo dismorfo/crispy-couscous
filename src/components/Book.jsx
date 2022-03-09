@@ -1,10 +1,10 @@
 import Iframe from 'react-iframe'
 
 export default function Book(props) { 
-  const { identifier = '' } = props;
+  //const { identifier = '' } = props;
 
   const endpoint = process.env.REACT_APP_BOOK_URL;
-  const url = `${endpoint}/${identifier}/1`;
+  const url = `${endpoint}/${props.identifier}/1`;
 
   return (
     <Iframe src={url}

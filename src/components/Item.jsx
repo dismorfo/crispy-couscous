@@ -10,9 +10,9 @@ function typesMap(type) {
 }
 
 export default function Item(props) {
-  
+
   const { title, identifier, type } = props.document;
-  
+
   const resource_type = typesMap(type);
 
   // See: https://mui.com/components/skeleton/
@@ -23,25 +23,24 @@ export default function Item(props) {
       <div className="card">
         <div className="thumbs">
           <div className="clipper">
-            <Link 
+            <Link
               to={`/${resource_type}/${identifier}`}
               aria-hidden="true"
-              role="presentation" 
+              role="presentation"
               tabIndex="-1"
             >
-              <img 
+              <img
                 src={`https://sites.dlib.nyu.edu/viewer/api/image/${resource_type}/${identifier}/1/full/150,/0/default.jpg`}
-                alt="" 
-                title="" 
+                alt=""
+                title=""
                 role="presentation"
                 loading="lazy"
               />
             </Link>
           </div>
         </div>
-        <h1 className="md_title">
-          <Link to={`/${resource_type}/${identifier}`}>{title}</Link>
-        </h1>
+        <p>Iframe Mirador: <Link to={`/${resource_type}/${identifier}`}>{title}</Link></p>
+        <p>Local Mirador: <Link to={`/viewer/mirador/${identifier}`}>{title}</Link></p>
       </div>
     </article>
   );
