@@ -30,7 +30,11 @@ cp .env.example .env
 
 ```
 REACT_APP_BOOK_URL=http://abc.xyz
+REACT_APP_API_VIEWER=http://def.xyz
+# Set GENERATE_SOURCEMAP to true or false
+GENERATE_SOURCEMAP=true
 ```
+See [create-react-app configuration](https://create-react-app.dev/docs/advanced-configuration/).
 
 3. To start the development server:
 

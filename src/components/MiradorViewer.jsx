@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Mirador from '../../node_modules/mirador/dist/mirador.min.js';
+import Mirador from 'mirador/dist/es/src/index';
+import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -45,7 +46,9 @@ export default function MiradorViewer(props) {
   }
 
   useEffect(() => {
-      Mirador.viewer(config);
+      Mirador.viewer(config, [
+        ...miradorImageToolsPlugin,
+      ]);
     })
 
   return (
