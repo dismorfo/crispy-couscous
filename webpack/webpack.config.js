@@ -1,12 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-//'../../node_modules/mirador/dist/mirador.min.js'
+
 module.exports = {
-  entry: '../src/components/MiradorViewer.jsx',
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: 'mirador.min.js',
-    path: path.resolve('..', '..', 'node_modules', 'mirador', 'dist', 'mirador.min.js'),
+    filename: 'mirador.js',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: './dist/',
   },
   plugins: [
