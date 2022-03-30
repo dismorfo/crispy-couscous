@@ -7,7 +7,7 @@ export default function Book(props) {
   const url = `${endpoint}/${props.identifier}/1`;
 
   return (
-    <div data-testid = "iframe">
+    <div role="application">
       <Iframe src={url}
             width="100%"
             height="750px"

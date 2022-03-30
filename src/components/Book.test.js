@@ -20,11 +20,14 @@ afterEach(() => {
 
 test('renders component without crashing', () => {
   render(<Book />, container);
+  expect(screen.getByRole("application")).toBeInTheDocument();
+  
 });
 
 
-test('loads iframe content', () => {
+test('loads correct iframe url', () => {
+  const endpoint = process.env.REACT_APP_BOOK_URL;
   render(<Book identifier="fales_io_book000012"></Book>);
-  const iframe = screen.queryByTestId("iframe");
-  expect(iframe).toBeInTheDocument();
+  const iframe = screen.getByRole("application").getElementsByTagName("Iframe")[0].attributes.src.value;
+  console.log(iframe);
 });
