@@ -31,7 +31,7 @@
     "use-persisted-state": "^0.3.3",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4",
-    "custom-panel": "furugoorin/mirador-custom-side-panel#master"
+    "mirador-custom-panel": "furugoorin/mirador-custom-side-panel#master"
   },
   "scripts": {
     "start": "react-scripts start",

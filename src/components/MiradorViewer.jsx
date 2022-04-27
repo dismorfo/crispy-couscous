@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Mirador from 'mirador/dist/es/src/index';
-import CustomSidePanel from 'custom-panel/es/components/index'
+import CustomSidePanel from 'mirador-custom-panel/es/components/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -16,7 +16,6 @@ export default function MiradorViewer(props) {
   const canvasIndexValue = 0;
   
   const uuid = "viewer-" + uuidv4();
-  
 
   const config = {
       id: uuid, 
