@@ -1,6 +1,7 @@
 # crispy-couscous
 
-React app prototype using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and [React Router v6](https://reactrouter.com/). 
+This is a React app prototype that demos the use of [Mirador Viewer](https://github.com/ProjectMirador/mirador). 
+Made with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) and [React Router v6](https://reactrouter.com/). 
 
 ## Setup
 
