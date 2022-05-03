@@ -43,11 +43,6 @@ export default function MiradorViewer(props) {
         showLocalePicker: true,
         hideWindowTitle: true,
       }, 
-      translations: { 
-        en: { 
-          openCompanionWindow_CustomKey1: 'This is a moo'
-        }
-      }
   }
 
   useEffect(() => {
